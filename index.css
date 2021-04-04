@@ -1,0 +1,75 @@
+/*  */
+
+/* Lijst met de 4 kleuren die het kleurenschema van de website bij challenge 1 bevatte (+ 2 extra kleuren lichtblauw) */
+/*background-color: #002e63;*/                    /* Kleur naam: Cool black */
+/*background-color: #191f45;*/                    /* Kleur naam: Navy blue bellflower (Konkikyo) */
+/*background-color: #b44f2d;*/                    /* Kleur naam: Pantone 8924 C Color */
+/*background-color: #9c4427;*/                    /* Kleur naam: Cumin Color */
+/*background-color: #afb3c9;*/
+/*background-color: #d6d8e4;*/
+
+
+* {
+    margin: 0;                                      /* Dit is om alle marges die de browser zelf instelt weer op 0 te zetten. Ik heb ze namelijk alleen nodig wanneer ik dat aangeef. */
+}
+
+html {
+    scroll-behavior: smooth;                        /* Dit zorgt ervoor dat bij een verwijzing (<a>) naar een deel van de pagina er geen verspringing is, maar dat hij automatisch 'scrollt' naar dat deel. Dit is te zien bij het menu en de pijl naar beneden in het eerste deel. */
+}
+
+body {
+    background-color: black;                      /* Dit is een declaratie die nog over is gebleven van voor ik de achtergronden had ingesteld haha. */
+    overflow-x: hidden;                             /* Dit zorgt ervoor dat er niet horizontaal gescrollt kan worden (soms loopt een element net buiten de paginarand en dan kan je onbedoeld horizontaal scrollen op de pagina en dat wil ik niet). */
+}
+
+.background {
+    height: 100vh;                                  /* De tags section met deze class zijn de drie hoofddelen van de pagina. Elk deel wilde ik volledig schermvullend hebben. Om dit te doen heb ik de hoogte op 100vh (dus de hele hoogte van het scherm), en de breedte op 100%. De breedte staat vast en de achtergrond staat op de andere stylesheets gedeclareerd en ingesteld zodat hij altijd meeschaalt met een volledige schermvulling. */
+    width: 100%;                                    /* Dit was een van de eerste regels die ik heb geschreven en toen werkte 100vw als breedte volgens mij niet en gaf een extra rand aan de zijkant, maar 100% werkte wel. Het is natuurlijk in princiepe hetzelfde als het parent element een breedte van de totale schermbreedte heeft; vw is namelijk een procent van de breedte van het scherm. */
+}
+
+#section1 {
+    background-color: red;
+}
+
+#section2 {
+    background-color: yellow;
+}
+
+#section3 {
+    background-color: blue;
+}
+
+h1 {
+    top: 12%;
+}
+
+article, .flexContainer {
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+}
+
+#map, #news, .flexContainer {
+    position: relative;
+    width: 80%;
+    height: 70%;
+    top: 20%;
+    left: 10%;
+}
+
+.flexContainer {                                    /* De flexbox ziet er bij elke schermgrootte net iets anders uit, dus wordt binnen de media queries verder opgemaakt. */
+    display: flex;                                  /* Voor elke schermgrootte geld natuurlijk in ieder geval deze regel (anders is het geen flexbox namelijk). */
+    flex-direction: row;
+    justify-content: center;
+}
+
+#dictionary, #music {
+    background-color: orange;
+    height: 100%;
+    width: 100%;
+    margin: 0 1%;
+}
+
+#spotify {
+    height: 100%;
+    width: 100%;
+}

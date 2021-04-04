@@ -1,0 +1,77 @@
+<!DOCTYPE html>                                                                             <!-- Ik heb voor deze website een README geschreven, met algemene opmerkingen over de code -->
+<html lang="en">                                                                            <!-- Deze website is in het Engels geschreven (aangezien SpaceX een Amerikaans bedrijf is). -->
+    <head>
+        <meta charset="utf-8" />                                                            <!-- Op deze website wordt de utf-8 character set gebruikt. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />            <!-- Standaard schaling wordt gebruikt op deze website. -->
+        <link rel="shortcut icon" type="image/x-icon" href="images/spacexicon1.ico" />      <!-- Dit zorgt dat spacexicon1.ico het plaatje wordt dat in het tabblad te zien is. -->
+        <!-- Hieronder staan alle gebruikte CSS style sheets gelinkt: -->                   <!-- Alle CSS is in de meeste gevallen helemaal zelf geschreven, en anders in ieder geval vanuit losse regels zelf bij elkaar gezocht, tenzij anders vermeld staat. -->
+        <link rel="stylesheet" href="index.css" type="text/css" />                          <!-- Dit is de algemene stylesheet met de opmaak die voor elk scherm hetzelfde is. -->
+        <link rel="stylesheet" href="indexSmartphone.css" type="text/css" />                <!-- Dit zijn alle regels CSS waarmee de opmaak voor smartphone (iPhone X (w: 375px, h: 812px)) schermen afwijken van de algemene CSS in index.css. -->
+        <link rel="stylesheet" href="indexTablet.css" type="text/css" />                    <!-- Dit zijn alle regels CSS waarmee de opmaak voor tablet (iPad (w: 768px, h: 1024px)) schermen afwijken van de algemene CSS in index.css. -->
+        <link rel="stylesheet" href="indexSmallDesktop.css" type="text/css" />              <!-- Dit zijn alle regels CSS waarmee de opmaak voor kleine desktop (Laptop with MDPI screen (w: 1280px, h: 800px)) schermen afwijken van de algemene CSS in index.css. -->
+        <link rel="stylesheet" href="indexLargeDesktop.css" type="text/css" />              <!-- Dit zijn alle regels CSS waarmee de opmaak voor grote desktop (Laptop with HiDPI screen (w: 1440, h: 900)) schermen afwijken van de algemene CSS in index.css. -->
+        <link rel="stylesheet" href="fonts.css" type="text/css" />                          <!-- Dit zijn alle regels CSS die betrekking hebben op de lettertypes en de opmaak ervan (e.g. lettertype, kleur, grootte, etc.). -->
+        <link rel="stylesheet" href="navbar.css" type="text/css" />                         <!-- Dit zijn alle regels CSS voor de opmaak van de navigatiebalk. Dit staat in een aparte file omdat dit losstaat van de rest van de pagina opmaak. -->
+        <link rel="stylesheet" href="scrollbar.css" type="text/css" />                      <!-- Dit zijn alle regels CSS voor de opmaak van de scrollbalk. Dit heeft verder niets te maken met de opmaak van de rest van de pagina, dus staat het in een apart bestand voor de netheid en het overzicht. -->
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" />
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+        <title>Welcome back! | Interplanetary Transport System Interface by SpaceX</title>  <!-- Dit is de tekst die in het tabblad in de browser te zien is -->
+        <!-- Hieronder staan alle gebruikte JavaScript files gelinkt: -->                   <!-- Alle JavaScript is zelf geschreven, tenzij erbij staat vermeld dat er een library is gebruikt (dit is alleen bij de grafieken). -->
+        <script src="navbar.js"></script>                                                   <!-- De JavaScript functie voor de navigatiebalk heb ik voor het overzicht en de netheid van de code in een aparte file gezet. -->
+        <script src="mobileNavbar.js"></script>                                             <!-- De JavaScript functie die ik heb geschreven voor het mobiele navigatiemenu -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script> <!-- Load the 'mapbox-gl-geocoder' plugin. -->
+        <!-- Promise polyfill script is required -->
+        <!-- to use Mapbox GL Geocoder in IE 11. -->
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+        <script src="mapAPI.js" defer></script>
+        <script src="newsAPI.js" defer></script>
+        <script src="dictionaryAPI.js" defer></script>
+    </head>
+    <body>
+        <nav id="navbar">                                                                   <!-- Dit is de navigatiebalk. Het id wordt gebruikt om de functie van het in en uit beeld schuiven van de balk te laten werken (ik heb de functie gemaakt toen deze tag nog een div was, dus vandaar). Deze tag kan gezien worden als container voor de drie linkjes die een snelkoppeling zijn naar de drie delen van de pagina. -->
+            <a id="home" href="#section1">Map</a>                                           <!-- Dit is een link naar het bovenste deel van de pagina (overlapping in functie met het SpaceX logo; het is aan de gebruiker om te bepalen wat het prettigste is om te gebruiken en weglaten kan mogelijk verwarring veroorzaken). -->
+            <a href="#section2">News</a>                                                    <!-- Dit is een link naar het middelste deel van de pagina. -->
+            <a href="#section3">Learning</a>                                                <!-- Dit is een link naar het onderste deel van de pagina. -->
+        </nav>
+        <nav id="mobileNavbar">                                                             <!-- De navigatiebalk die op de tablet en desktop schermen wordt gebruikt is niet geschikt voor de smartphone, vandaar dat ik een apart menu heb gemaakt voor de smartphone. -->
+            <a id="home" href="#section1" onclick="closeNav();">Map</a>                     <!-- Normaal zou ik niet zo snel een eventListener als attribute toevoegen maar er zijn drie mogelijke elementen die dezelfde functie moeten kunnen aanroepen, en dit is dan verreweg de eenvoudigste manier om dat te doen (anders had ik veel meer regels JavaScript moeten gebruiken om te zorgen dat ze allemaal dezelfde functie aanroepen) -->
+            <a href="#section2" onclick="closeNav();">News</a>
+            <a href="#section3" onclick="closeNav();">Learning</a>
+        </nav>
+        <div class="iconContainer" onclick="toggleIcon(this); openNav(this);">              <!-- Normaal zou ik niet zo snel een eventListener als attribute toevoegen maar door de 'this' dat nodig is voor de functie is dit de meest gemakkelijke manier. -->
+            <div class="bar1"></div>                                                        <!-- Deze drie balkjes (icoon voor een hamburger menu) transformeren tot een kruisje -->
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <a href="#section1"><img id="spacexLogo" src="images/spacex2.png" alt="SpaceX Logo" title="Home" /></a>                                         <!-- De navigatiebalk schuift uit het scherm bij het scrollen, maar het logo van SpaceX moet wel blijven staan. Vandaar dat deze regel code, dat eigenlijk bij de navigatiebalk hoort, buiten de tag nav staat en dus blijft staan wanneer de navigatiebalk verdwijnt. -->
+   
+        <main>
+            <section class="background" id="section1">
+                <h1>Landing zone</h1>
+                <article id="map">
+                    <!-- Mapbox API -->
+                </article>
+            </section>
+            <section class="background" id="section2">
+                <h1>What's in the news?</h1>
+                <article id="news">
+                    <!-- Spaceflight News API -->
+                </article>
+            </section>
+            <section class="background" id="section3">
+                <h1>Getting used to Earth</h1>
+                <div class="flexContainer">
+                    <article id="dictionary">
+                        <!-- Oxford dictionairy API -->
+                    </article>
+                    <article id="music">
+                        <!-- Ik wilde hier eerst de spotify API gebruiken, maar ik kwam er later achter dat dat helemaal niet nodig is voor het inladen van een playlist. Ik heb al 3 API's gebruikt op deze pagina, dus het is verder geen ramp. Ik vind het wel een leuke toevoeging persoonlijk (en ik had de playlist al helemaal gemaakt dus vond ik het zonde om die niet te gebruiken haha). -->
+                        <iframe id="spotify" src="https://open.spotify.com/embed/playlist/3yYrOeBBKNhFay5oN4daVS" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
