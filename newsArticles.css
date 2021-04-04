@@ -1,0 +1,50 @@
+#news {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.newsArticle {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    background-color: #002e63;
+}
+
+.newsArticle:nth-of-type(even) {
+    background-color: #9c4427;
+}
+
+.articleImage {
+    display: inline-block;
+    width: 200px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+h3 {
+    position: relative;
+    left: 215px;
+    top: 5px;
+    max-width: 600px;
+}
+
+.publicationDate {
+    position: absolute;
+    text-align: right;
+    right: 10px;
+    top: 5px;
+}
+
+.summary {
+    position: relative;
+    left: 215px;
+    top: 10px;
+    max-width: 600px;
+}
+
+.articleSource {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}

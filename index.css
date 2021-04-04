@@ -28,15 +28,30 @@ body {
 }
 
 #section1 {
-    background-color: red;
+    /*background-color: red;*/
+    background: url("images/space1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
 }
 
 #section2 {
-    background-color: yellow;
+    /*background-color: yellow;*/
+    background: url("images/earth1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
 }
 
 #section3 {
-    background-color: blue;
+    /*background-color: blue;*/
+    background: url("images/earth2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
 }
 
 h1 {
@@ -46,6 +61,10 @@ h1 {
 article, .flexContainer {
     /*border: 1px solid black;*/
     box-sizing: border-box;
+}
+
+article {
+    box-shadow: 0px 0px 30px black;
 }
 
 #map, #news, .flexContainer {
@@ -62,8 +81,7 @@ article, .flexContainer {
     justify-content: center;
 }
 
-#dictionary, #music {
-    background-color: orange;
+#images, #music {
     height: 100%;
     width: 100%;
     margin: 0 1%;
@@ -73,3 +91,33 @@ article, .flexContainer {
     height: 100%;
     width: 100%;
 }
+
+h2 {
+    top: 5%;
+    width: 49%;
+    z-index: 100;
+}
+
+#images {
+    overflow: hidden;
+}
+
+#randomImageContainer {
+    width: 100%;
+    height: 100%;
+}
+
+#randomImage {
+    width: inherit;
+    height: inherit;
+    z-index: 10;
+}
+
+/*.definition {
+    background-color: pink;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 2px 0;
+}*/
