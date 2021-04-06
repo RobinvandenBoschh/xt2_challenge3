@@ -12,7 +12,7 @@
         <!--<link rel="stylesheet" href="indexLargeDesktop.css" type="text/css" />-->              <!-- Dit zijn alle regels CSS waarmee de opmaak voor grote desktop (Laptop with HiDPI screen (w: 1440, h: 900)) schermen afwijken van de algemene CSS in index.css. -->
         <link rel="stylesheet" href="fonts.css" type="text/css" />                          <!-- Dit zijn alle regels CSS die betrekking hebben op de lettertypes en de opmaak ervan (e.g. lettertype, kleur, grootte, etc.). -->
         <link rel="stylesheet" href="navbar.css" type="text/css" />                         <!-- Dit zijn alle regels CSS voor de opmaak van de navigatiebalk. Dit staat in een aparte file omdat dit losstaat van de rest van de pagina opmaak. -->
-        <!--<link rel="stylesheet" href="scrollbar.css" type="text/css" />-->                      <!-- Dit zijn alle regels CSS voor de opmaak van de scrollbalk. Dit heeft verder niets te maken met de opmaak van de rest van de pagina, dus staat het in een apart bestand voor de netheid en het overzicht. -->
+        <link rel="stylesheet" href="scrollbar.css" type="text/css" />                      <!-- Dit zijn alle regels CSS voor de opmaak van de scrollbalk. Dit heeft verder niets te maken met de opmaak van de rest van de pagina, dus staat het in een apart bestand voor de netheid en het overzicht. -->
         <link rel="stylesheet" href="newsArticles.css" type="text/css" />
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" />
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
@@ -60,33 +60,23 @@
                 <h1>What's in the news?</h1>
                 <article id="news">
                     <!-- Spaceflight News API -->
-                    <div class="newsArticle">
-                        <img class="articleImage" src="https://mk0spaceflightnoa02a.kinstacdn.com/wp-content/uploads/2021/04/mastcamz_1.jpg" />
-                        <h3>Perseverance rover’s zoomable camera checks out on Red Planet</h3>
-                        <p class="publicationDate">2021-04-04T16:43:04.000Z</p>
-                        <p class="summary">Scientists have confirmed the first zoomable camera on Mars is in top-top shape since arriving aboard NASA’s Perseverance rover in February, adding a long-distance survey capability to the robot’s scientific toolkit. The camera is now ready to capture high-definition video of the Ingenuity helicopter’s first flight in the Martian atmosphere later this month.</p>
-                        <a class="articleSource" href="https://spaceflightnow.com/2021/04/04/perseverance-rovers-zoomable-camera-checks-out-on-red-planet/">Spaceflight Now</a>
+                    <div class="options">
+                        <button class="buttonOptions active" onclick="changeContent(this.id)" id="buttonArticles">Articles</button>
+                        <button class="buttonOptions" onclick="changeContent(this.id)" id="buttonBlogs">Blogs</button>
+                        <button class="buttonOptions" onclick="changeContent(this.id)" id="buttonReports">Reports</button>
+                        <input id="searchArticles" type="text" placeholder="Search for articles" />
+                        <button id="submitSearch">Search</button>
                     </div>
-                    <div class="newsArticle">
-                        <img class="articleImage" src="https://spacenews.com/wp-content/uploads/2021/04/5799112-scaled.jpg" />
-                        <h3>Technology race against China a key concern for Pentagon acquisition nominee</h3>
-                        <p class="publicationDate">2021-04-04T14:23:08.000Z</p>
-                        <p class="summary">Michael Brown, director of the Defense Innovation Unit, was nominated by President Biden to serve as undersecretary of defense for acquisition and sustainment.</p>
-                        <a class="articleSource" href="https://spacenews.com/technology-race-against-china-a-key-concern-for-pentagon-acquisition-nominee/">SpaceNews</a>
-                    </div>
-                    <div class="newsArticle">
-                        <img class="articleImage" src="https://mk0spaceflightnoa02a.kinstacdn.com/wp-content/uploads/2021/04/mastcamz_1.jpg" />
-                        <h3>Perseverance rover’s zoomable camera checks out on Red Planet</h3>
-                        <p class="publicationDate">2021-04-04T16:43:04.000Z</p>
-                        <p class="summary">Scientists have confirmed the first zoomable camera on Mars is in top-top shape since arriving aboard NASA’s Perseverance rover in February, adding a long-distance survey capability to the robot’s scientific toolkit. The camera is now ready to capture high-definition video of the Ingenuity helicopter’s first flight in the Martian atmosphere later this month.</p>
-                        <a class="articleSource" href="https://spaceflightnow.com/2021/04/04/perseverance-rovers-zoomable-camera-checks-out-on-red-planet/">Spaceflight Now</a>
-                    </div>
-                    <div class="newsArticle">
-                        <img class="articleImage" src="https://spacenews.com/wp-content/uploads/2021/04/5799112-scaled.jpg" />
-                        <h3>Technology race against China a key concern for Pentagon acquisition nominee</h3>
-                        <p class="publicationDate">2021-04-04T14:23:08.000Z</p>
-                        <p class="summary">Michael Brown, director of the Defense Innovation Unit, was nominated by President Biden to serve as undersecretary of defense for acquisition and sustainment.</p>
-                        <a class="articleSource" href="https://spacenews.com/technology-race-against-china-a-key-concern-for-pentagon-acquisition-nominee/">SpaceNews</a>
+                    <div class="articles" id="articleContainer">
+                        <!-- Article empty template:
+                            <div class="newsArticle">
+                                <div class="imageContainer" id="imageContainer0"></div>
+                                <div class="headerContainer" id="headerContainer0"></div>
+                                <div class="dateContainer" id="dateContainer0"></div>
+                                <div class="textContainer" id="textContainer0"></div>
+                                <div class="sourceContainer" id="sourceContainer0"></div>
+                            </div>
+                        -->
                     </div>
                 </article>
             </section>

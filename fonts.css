@@ -16,9 +16,14 @@ footer a {
 }
 
 
-p {
+p, button {
     font-family: 'Montserrat', sans-serif;
     color: white;
+}
+
+input[type=text] {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
 }
 
 #mainTitle {

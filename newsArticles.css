@@ -1,50 +1,153 @@
 #news {
     overflow-y: scroll;
     overflow-x: hidden;
+    background: url("images/space4_darker1_w1200_h1800.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.options {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 80px 80px 80px auto 350px 80px;
+    grid-template-rows: 25px;
+    grid-gap: 15px;
+    align-content: center;
+    width: 90%;
+    height: 45px;
+    top: 0;
+    left: 5%;
+    /*background-color: black;*/
+    z-index: 100;
+}
+
+.buttonOptions, #submitSearch {
+    background-color: #b44f2d;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.buttonOptions:hover, #submitSearch:hover {
+    background-color: #9c4427;
+}
+
+.active {
+    background-color: #002e63 !important;
+    color: white;
+}
+.active:hover {
+    background-color: #191f45 !important;
+}
+
+#buttonArticles {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#buttonBlogs {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#buttonReports {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#searchArticles {
+    grid-column: 5;
+    grid-row: 1;
+    border-radius: 10px;
+}
+
+#submitSearch {
+    grid-column: 6;
+    grid-row: 1;
 }
 
 .newsArticle {
     position: relative;
-    width: 100%;
-    min-height: 200px;
-    background-color: #002e63;
+    display: grid;                                  /* Deze regel zorgt dat het een CSS grid is. */ 
+    grid-gap: 10px;
+    align-content: center;
+    grid-template-rows: 60px auto;
+    width: 90%;
+    left: 5%;
+    /*min-height: 200px;*/
+    max-height: 250px;
+    background-color: rgba(0, 46, 99, 0.3);
+    padding: 10px 0;
+    margin: 30px 0;
+}
+
+.articles {
+    margin-top: 60px;
 }
 
 .newsArticle:nth-of-type(even) {
-    background-color: #9c4427;
+    background-color: rgba(156, 68, 39, 0.3);
 }
 
+.imageContainer {
+    grid-column: 1;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
+    grid-row: 1 / span 2;                                    /* Deze cel start in de eerste rij van het grid */
+    align-self: center;
+    justify-self: end;
+    overflow: hidden;
+    max-height: 200px;
+    
+}
 .articleImage {
-    display: inline-block;
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.headerContainer {
+    grid-column: 2 / span 3;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
+    grid-row: 1;                                    /* Deze cel start in de eerste rij van het grid */
+    align-self: start;
+}
+.articleTitle {
     position: absolute;
-    left: 5px;
-    top: 5px;
-}
-
-h3 {
-    position: relative;
-    left: 215px;
-    top: 5px;
     max-width: 600px;
+    margin-top: 10px;
+    margin-left: 5px;
 }
 
+.dateContainer {
+    grid-column: 5;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
+    grid-row: 1;                                    /* Deze cel start in de eerste rij van het grid */
+    align-self: start;
+}
 .publicationDate {
-    position: absolute;
     text-align: right;
-    right: 10px;
-    top: 5px;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 
+.textContainer {
+    grid-column: 2 / span 3;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
+    grid-row: 2;                                    /* Deze cel start in de eerste rij van het grid */
+    align-self: start;
+}
 .summary {
-    position: relative;
-    left: 215px;
-    top: 10px;
+    margin-left: 5px;
     max-width: 600px;
+    padding-bottom: 20px;
 }
 
+.sourceContainer {
+    grid-column: 5;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
+    grid-row: 2;                                    /* Deze cel start in de eerste rij van het grid */
+    align-self: end;
+    justify-self: end;
+    padding-bottom: 10px;
+}
 .articleSource {
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
+    text-align: right;
+    margin-right: 20px;
 }
