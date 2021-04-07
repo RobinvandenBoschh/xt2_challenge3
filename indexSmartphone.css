@@ -1,0 +1,80 @@
+                                                  /* De afmetingen en afstanden van elementen zijn per schermgrootte anders. Ook verandert de afbeelding per schermgrootte naar een geoptimaliseerde versie van de afbeelding voor die specifieke schermgrootte. Dit zorgt dat de website zo snel mogelijk kan laden en het minder data kost dan bij het laden van hyper scherpe afbeeldingen. */
+/* smartphone */
+@media only screen and (max-device-width: 428px) and (max-device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation : portrait){ 
+    html {
+        overflow-x: hidden;                                         /* Deze declaratie in de body tag werkte niet op de smartphone en tablet schermen, maar wel in de html tag. */
+    }
+
+    #section0 {
+        background: url("images/earth3.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+    }
+    
+    #section1 {
+        background: url("images/space1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+    }
+    
+    #section2 {
+        background: url("images/earth1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+    }
+    
+    #section3 {
+        background: url("images/earth2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: bottom;
+    }
+
+    #mainTitle {
+        top: 0;
+        padding-top: 15vh;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    #introText {
+        width: 80%;
+        margin-left: 10%;
+        top: 5%;
+    }
+
+    #arrowDown {
+        width: 20vw;                                                /* Aangezien een smartphone en tablet scherm langer zijn dan breed, moet de breedte van deze afbeelding in vw op die schermen veel groter zijn dan op desktop schermen. */
+        bottom: 1vh;
+        left: 40vw;
+    }
+
+    #map, #news, .flexContainer {
+        position: relative;
+        width: 80%;
+        height: 80%;
+        top: 12%;
+        left: 10%;
+    }
+
+    .flexContainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #images, #music {
+        margin: 4% 0;
+    }
+
+    h2 {
+        width: 100%;
+    }
+    
+}

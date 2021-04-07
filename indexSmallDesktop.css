@@ -1,0 +1,77 @@
+/* small desktop */
+@media only screen and (min-device-width : 1025px) and (max-device-width : 1439px) {
+    #section0 {
+        background: url("images/earth3.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+    }
+    
+    #section1 {
+        background: url("images/space1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+    }
+    
+    #section2 {
+        background: url("images/earth1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+    }
+    
+    #section3 {
+        background: url("images/earth2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: bottom;
+    }
+    
+    #mainTitle {
+        top: 0;
+        padding-top: 30vh;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    #introText {
+        width: 60%;
+        margin-left: 20%;
+        position: relative;
+        top: 5%;
+        text-shadow: 0px 0px 5px black;
+    }
+
+    #arrowDown {
+        width: 4vw;
+        bottom: 1vh;
+        left: 48vw;
+    }
+
+    #map, #news, .flexContainer {
+        position: relative;
+        width: 80%;
+        height: 70%;
+        top: 20%;
+        left: 10%;
+    }
+
+    .flexContainer {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #images, #music {
+        margin: 0 1%;
+    }
+
+    h2 {
+        width: 30%;
+        margin-left: 10%;
+    }
+}

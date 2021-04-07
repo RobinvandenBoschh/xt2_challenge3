@@ -8,7 +8,6 @@ var map = new mapboxgl.Map({
     zoom: 3
 });
 
-// Add the control to the map.
 map.addControl(
     new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
@@ -17,13 +16,11 @@ map.addControl(
 );
  
 map.on('load', function () {
-    // Add an image to use as a custom marker
     map.loadImage(
         'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
         function (error, image) {
             if (error) throw error;
             map.addImage('custom-marker', image);
-            // Add a GeoJSON source with 2 points
             map.addSource('points', {
                 'type': 'geojson',
                 'data': {

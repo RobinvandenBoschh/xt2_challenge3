@@ -6,39 +6,40 @@
         <link rel="shortcut icon" type="image/x-icon" href="images/spacexicon1.ico" />      <!-- Dit zorgt dat spacexicon1.ico het plaatje wordt dat in het tabblad te zien is. -->
         <!-- Hieronder staan alle gebruikte CSS style sheets gelinkt: -->                   <!-- Alle CSS is in de meeste gevallen helemaal zelf geschreven, en anders in ieder geval vanuit losse regels zelf bij elkaar gezocht, tenzij anders vermeld staat. -->
         <link rel="stylesheet" href="index.css" type="text/css" />                          <!-- Dit is de algemene stylesheet met de opmaak die voor elk scherm hetzelfde is. -->
-        <!--<link rel="stylesheet" href="indexSmartphone.css" type="text/css" />-->                <!-- Dit zijn alle regels CSS waarmee de opmaak voor smartphone (iPhone X (w: 375px, h: 812px)) schermen afwijken van de algemene CSS in index.css. -->
-        <!--<link rel="stylesheet" href="indexTablet.css" type="text/css" />-->                    <!-- Dit zijn alle regels CSS waarmee de opmaak voor tablet (iPad (w: 768px, h: 1024px)) schermen afwijken van de algemene CSS in index.css. -->
-        <!--<link rel="stylesheet" href="indexSmallDesktop.css" type="text/css" />-->              <!-- Dit zijn alle regels CSS waarmee de opmaak voor kleine desktop (Laptop with MDPI screen (w: 1280px, h: 800px)) schermen afwijken van de algemene CSS in index.css. -->
-        <!--<link rel="stylesheet" href="indexLargeDesktop.css" type="text/css" />-->              <!-- Dit zijn alle regels CSS waarmee de opmaak voor grote desktop (Laptop with HiDPI screen (w: 1440, h: 900)) schermen afwijken van de algemene CSS in index.css. -->
+        <link rel="stylesheet" href="indexSmartphone.css" type="text/css" />                <!-- Dit zijn alle regels CSS waarmee de opmaak voor smartphone (iPhone X (w: 375px, h: 812px)) schermen afwijken van de algemene CSS in index.css. -->
+        <link rel="stylesheet" href="indexTablet.css" type="text/css" />                    <!-- Dit zijn alle regels CSS waarmee de opmaak voor tablet (iPad (w: 768px, h: 1024px)) schermen afwijken van de algemene CSS in index.css. -->
+        <link rel="stylesheet" href="indexSmallDesktop.css" type="text/css" />              <!-- Dit zijn alle regels CSS waarmee de opmaak voor kleine desktop (Laptop with MDPI screen (w: 1280px, h: 800px)) schermen afwijken van de algemene CSS in index.css. -->
+        <link rel="stylesheet" href="indexLargeDesktop.css" type="text/css" />              <!-- Dit zijn alle regels CSS waarmee de opmaak voor grote desktop (Laptop with HiDPI screen (w: 1440, h: 900)) schermen afwijken van de algemene CSS in index.css. -->
         <link rel="stylesheet" href="fonts.css" type="text/css" />                          <!-- Dit zijn alle regels CSS die betrekking hebben op de lettertypes en de opmaak ervan (e.g. lettertype, kleur, grootte, etc.). -->
         <link rel="stylesheet" href="navbar.css" type="text/css" />                         <!-- Dit zijn alle regels CSS voor de opmaak van de navigatiebalk. Dit staat in een aparte file omdat dit losstaat van de rest van de pagina opmaak. -->
         <link rel="stylesheet" href="scrollbar.css" type="text/css" />                      <!-- Dit zijn alle regels CSS voor de opmaak van de scrollbalk. Dit heeft verder niets te maken met de opmaak van de rest van de pagina, dus staat het in een apart bestand voor de netheid en het overzicht. -->
         <link rel="stylesheet" href="newsArticles.css" type="text/css" />
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" />
-        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css" />
         <title>Welcome back! | Interplanetary Transport System Interface by SpaceX</title>  <!-- Dit is de tekst die in het tabblad in de browser te zien is -->
         <!-- Hieronder staan alle gebruikte JavaScript files gelinkt: -->                   <!-- Alle JavaScript is zelf geschreven, tenzij erbij staat vermeld dat er een library is gebruikt (dit is alleen bij de grafieken). -->
         <script src="navbar.js"></script>                                                   <!-- De JavaScript functie voor de navigatiebalk heb ik voor het overzicht en de netheid van de code in een aparte file gezet. -->
         <script src="mobileNavbar.js"></script>                                             <!-- De JavaScript functie die ik heb geschreven voor het mobiele navigatiemenu -->
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
-        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script> <!-- Load the 'mapbox-gl-geocoder' plugin. -->
-        <!-- Promise polyfill script is required -->
-        <!-- to use Mapbox GL Geocoder in IE 11. -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script> <!-- 'mapbox-gl-geocoder' plugin. -->
         <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
         <script src="mapAPI.js" defer></script>
         <script src="newsAPI.js" defer></script>
         <script src="randomImageAPI.js" defer></script>
+        <script src="typewriter.js"></script>
         <!--<script src="dictionaryAPI.js" defer></script>-->
     </head>
     <body>
         <nav id="navbar">                                                                   <!-- Dit is de navigatiebalk. Het id wordt gebruikt om de functie van het in en uit beeld schuiven van de balk te laten werken (ik heb de functie gemaakt toen deze tag nog een div was, dus vandaar). Deze tag kan gezien worden als container voor de drie linkjes die een snelkoppeling zijn naar de drie delen van de pagina. -->
-            <a id="home" href="#section1">Map</a>                                           <!-- Dit is een link naar het bovenste deel van de pagina (overlapping in functie met het SpaceX logo; het is aan de gebruiker om te bepalen wat het prettigste is om te gebruiken en weglaten kan mogelijk verwarring veroorzaken). -->
-            <a href="#section2">News</a>                                                    <!-- Dit is een link naar het middelste deel van de pagina. -->
-            <a href="#section3">Learning</a>                                                <!-- Dit is een link naar het onderste deel van de pagina. -->
+            <a id="home" href="#section0">Home</a>                                          <!-- Dit is een link naar het bovenste deel van de pagina (overlapping in functie met het SpaceX logo; het is aan de gebruiker om te bepalen wat het prettigste is om te gebruiken en weglaten kan mogelijk verwarring veroorzaken). -->
+            <a href="#section1">Map</a>                                                     <!-- Dit is een link naar het tweede deel van de pagina. -->
+            <a href="#section2">News</a>                                                    <!-- Dit is een link naar het derde deel van de pagina. -->
+            <a href="#section3">Learning</a>                                                <!-- Dit is een link naar het vierde deel van de pagina. -->
         </nav>
         <nav id="mobileNavbar">                                                             <!-- De navigatiebalk die op de tablet en desktop schermen wordt gebruikt is niet geschikt voor de smartphone, vandaar dat ik een apart menu heb gemaakt voor de smartphone. -->
-            <a id="home" href="#section1" onclick="closeNav();">Map</a>                     <!-- Normaal zou ik niet zo snel een eventListener als attribute toevoegen maar er zijn drie mogelijke elementen die dezelfde functie moeten kunnen aanroepen, en dit is dan verreweg de eenvoudigste manier om dat te doen (anders had ik veel meer regels JavaScript moeten gebruiken om te zorgen dat ze allemaal dezelfde functie aanroepen) -->
+            <a id="home" href="#section0" onclick="closeNav();">Home</a>                    <!-- Normaal zou ik niet zo snel een eventListener als attribute toevoegen maar er zijn drie mogelijke elementen die dezelfde functie moeten kunnen aanroepen, en dit is dan verreweg de eenvoudigste manier om dat te doen (anders had ik veel meer regels JavaScript moeten gebruiken om te zorgen dat ze allemaal dezelfde functie aanroepen) -->
+            <a href="#section1" onclick="closeNav();">Map</a>
             <a href="#section2" onclick="closeNav();">News</a>
             <a href="#section3" onclick="closeNav();">Learning</a>
         </nav>
@@ -47,9 +48,14 @@
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a href="#section1"><img id="spacexLogo" src="images/spacex2.png" alt="SpaceX Logo" title="Home" /></a>                                         <!-- De navigatiebalk schuift uit het scherm bij het scrollen, maar het logo van SpaceX moet wel blijven staan. Vandaar dat deze regel code, dat eigenlijk bij de navigatiebalk hoort, buiten de tag nav staat en dus blijft staan wanneer de navigatiebalk verdwijnt. -->
+        <a href="#section0"><img id="spacexLogo" src="images/spacex2.png" alt="SpaceX Logo" title="Home" /></a>                                         <!-- De navigatiebalk schuift uit het scherm bij het scrollen, maar het logo van SpaceX moet wel blijven staan. Vandaar dat deze regel code, dat eigenlijk bij de navigatiebalk hoort, buiten de tag nav staat en dus blijft staan wanneer de navigatiebalk verdwijnt. -->
    
         <main>
+            <section class="background" id="section0">                                      <!-- Dit is section 0. Deze tag heeft, net als alle andere sections de class background, omdat ik tijdens het maken niet precies wist of ik nog meer tags met section ging gebruiken. Het id #section0 is voor de achtergrond die uniek is voor deze section en voor het verwijzen naar dit deel van de pagina vanuit de navigatiebalk. -->
+                <h1 id="mainTitle"></h1>                                                    <!-- De tekst van h1 wordt letter voor letter getypt door typewriter.js.-->
+                <p id="introText"></p>                                                      <!-- Hetzelfde geldt voor de introductie tekst. -->
+                <a href="#section1"><img id="arrowDown" src="images/arrowdown1.gif" alt="Arrow down" title="Scroll down for more inforation" /></a>  <!-- Pijltje voor gebruiksgemak (dan hoeft de gebruiker niet te scrollen om bij het tweede deel van de pagina te komen). Het komt pas te voorschijn als typewriter.js af is gelopen. -->
+            </section>
             <section class="background" id="section1">
                 <h1>Landing zone</h1>
                 <article id="map">
@@ -64,8 +70,8 @@
                         <button class="buttonOptions active" onclick="changeContent(this.id)" id="buttonArticles">Articles</button>
                         <button class="buttonOptions" onclick="changeContent(this.id)" id="buttonBlogs">Blogs</button>
                         <button class="buttonOptions" onclick="changeContent(this.id)" id="buttonReports">Reports</button>
-                        <input id="searchArticles" type="text" placeholder="Search for articles" />
-                        <button id="submitSearch">Search</button>
+                        <!--<input id="searchArticles" type="text" placeholder="Search for articles" />
+                        <button id="submitSearch">Search</button>-->
                     </div>
                     <div class="articles" id="articleContainer">
                         <!-- Article empty template:

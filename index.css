@@ -23,35 +23,8 @@ body {
 }
 
 .background {
-    height: 100vh;                                  /* De tags section met deze class zijn de drie hoofddelen van de pagina. Elk deel wilde ik volledig schermvullend hebben. Om dit te doen heb ik de hoogte op 100vh (dus de hele hoogte van het scherm), en de breedte op 100%. De breedte staat vast en de achtergrond staat op de andere stylesheets gedeclareerd en ingesteld zodat hij altijd meeschaalt met een volledige schermvulling. */
-    width: 100%;                                    /* Dit was een van de eerste regels die ik heb geschreven en toen werkte 100vw als breedte volgens mij niet en gaf een extra rand aan de zijkant, maar 100% werkte wel. Het is natuurlijk in princiepe hetzelfde als het parent element een breedte van de totale schermbreedte heeft; vw is namelijk een procent van de breedte van het scherm. */
-}
-
-#section1 {
-    /*background-color: red;*/
-    background: url("images/space1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-}
-
-#section2 {
-    /*background-color: yellow;*/
-    background: url("images/earth1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-}
-
-#section3 {
-    /*background-color: blue;*/
-    background: url("images/earth2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: bottom;
+    height: 100vh;                                  /* De tags section met deze class zijn de vier hoofddelen van de pagina. Elk deel wilde ik volledig schermvullend hebben. Om dit te doen heb ik de hoogte op 100vh (dus de hele hoogte van het scherm), en de breedte op 100%. De breedte staat vast en de achtergrond staat op de andere stylesheets gedeclareerd en ingesteld zodat hij altijd meeschaalt met een volledige schermvulling. */
+    width: 100%;                                    /* Dit was een van de eerste regels die ik heb geschreven en toen werkte 100vw als breedte volgens mij niet en gaf een extra rand aan de zijkant, maar 100% werkte wel. Het is natuurlijk in principe hetzelfde als het parent element een breedte van de totale schermbreedte heeft; vw is namelijk een procent van de breedte van het scherm. */
 }
 
 h1 {
@@ -59,8 +32,13 @@ h1 {
     cursor: default;
 }
 
+#arrowDown {
+    display: none;                                  /* De pijl naar beneden komt pas te voorschijn aan het eind van de functie typewriter. In die functie wordt deze regel omgezet van display:none naar display:block, maar als de pagina laadt moet de waarde nog op none staan. */
+    position: absolute;
+    z-index: 100;                                   /* Ik neem altijd z-index waarden die echt extreem ver uit elkaar liggen omdat ik me dan geen zorgen hoef te maken over de vraag of hij wel helemaal bovenop komt haha. Maar ik ben me ervan bewust dat het een overdreve hoge waarde is. */
+}
+
 article, .flexContainer {
-    /*border: 1px solid black;*/
     box-sizing: border-box;
 }
 
@@ -68,24 +46,13 @@ article {
     box-shadow: 0px 0px 30px black;
 }
 
-#map, #news, .flexContainer {
-    position: relative;
-    width: 80%;
-    height: 70%;
-    top: 20%;
-    left: 10%;
-}
-
 .flexContainer {                                    /* De flexbox ziet er bij elke schermgrootte net iets anders uit, dus wordt binnen de media queries verder opgemaakt. */
     display: flex;                                  /* Voor elke schermgrootte geld natuurlijk in ieder geval deze regel (anders is het geen flexbox namelijk). */
-    flex-direction: row;
-    justify-content: center;
 }
 
 #images, #music {
     height: 100%;
     width: 100%;
-    margin: 0 1%;
 }
 
 #spotify {
@@ -95,7 +62,6 @@ article {
 
 h2 {
     top: 5%;
-    width: 49%;
     z-index: 100;
     cursor: default;
 }
