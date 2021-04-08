@@ -92,4 +92,9 @@ h2 {
     text-align: center;
     color: white;
     background: #002e63;
+    cursor: pointer;
+}
+
+#zoom:hover {
+    background: #191f45;
 }
