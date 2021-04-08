@@ -152,6 +152,10 @@ h3 {
     h2 {
         font-size: 1.75em;
     }
+
+    #zoom {
+        font-size: 1.3em;
+    }
 }
 
 
@@ -174,5 +178,9 @@ h3 {
 
     h2 {
         font-size: 2em;
+    }
+
+    #zoom {
+        font-size: 1.3em;
     }
 }

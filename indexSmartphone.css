@@ -6,7 +6,7 @@
     }
 
     #section0 {
-        background: url("images/earth3.jpg");
+        background: url("images/earth3_darker1_w1440_h958.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: center;
@@ -14,7 +14,7 @@
     }
     
     #section1 {
-        background: url("images/space1.jpg");
+        background: url("images/space1_darker1_w1440_h958.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: center;
@@ -22,7 +22,7 @@
     }
     
     #section2 {
-        background: url("images/earth1.jpg");
+        background: url("images/earth1_darker1_w768_h1024.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: center;
@@ -30,7 +30,7 @@
     }
     
     #section3 {
-        background: url("images/earth2.jpg");
+        background: url("images/earth2_darker1_w1440_h857.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: center;
@@ -77,4 +77,8 @@
         width: 100%;
     }
     
+    #zoom {
+        position: relative;
+        height: 50px;
+    }
 }

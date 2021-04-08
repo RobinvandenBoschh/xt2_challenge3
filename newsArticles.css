@@ -44,17 +44,6 @@
     grid-row: 1;
 }
 
-/*#searchArticles {
-    grid-column: 5;
-    grid-row: 1;
-    border-radius: 10px;
-}
-
-#submitSearch {
-    grid-column: 6;
-    grid-row: 1;
-}*/
-
 .newsArticle {
     position: relative;
     display: grid;                                  /* Deze regel zorgt dat het een CSS grid is. */ 
@@ -66,54 +55,6 @@
     background-color: rgba(156, 68, 39, 0.3);
 }
 
-/*.imageContainer {
-    align-self: center;
-    justify-self: end;
-    overflow: hidden;
-    max-height: 200px;
-}
-.articleImage {
-    max-width: 200px;
-    width: 100%;
-}
-
-.headerContainer {
-    align-self: start;
-}
-.articleTitle {
-    position: absolute;
-    max-width: 600px;
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
-.dateContainer {
-    align-self: start;
-}
-.publicationDate {
-    text-align: right;
-    margin-right: 20px;
-    margin-top: 10px;
-}
-
-.textContainer {
-    align-self: start;
-}
-.summary {
-    margin-left: 5px;
-    max-width: 600px;
-    padding-bottom: 20px;
-}
-
-.sourceContainer {
-    align-self: end;
-    justify-self: end;
-    padding-bottom: 10px;
-}
-.articleSource {
-    text-align: right;
-    margin-right: 20px;
-}*/
 
 
 
@@ -154,7 +95,7 @@
     }
 
     .imageContainer {
-        grid-column: 1;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
+        grid-column: 1;       
         grid-row: 1;
         align-self: start;
         justify-self: center;
@@ -169,8 +110,8 @@
     }
     
     .headerContainer {
-        grid-column: 1 / span 2;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 2;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 1 / span 2;                              
+        grid-row: 2;
         align-self: start;
     }
     .articleTitle {
@@ -178,8 +119,8 @@
     }
     
     .dateContainer {
-        grid-column: 2;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 1;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 2;
+        grid-row: 1;
         align-self: start;
     }
     .publicationDate {
@@ -187,8 +128,8 @@
     }
     
     .textContainer {
-        grid-column: 1 / span 2;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 3;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 1 / span 2;
+        grid-row: 3;
         align-self: start;
     }
     .summary {
@@ -197,8 +138,8 @@
     }
     
     .sourceContainer {
-        grid-column: 1 / span 2;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 4;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 1 / span 2;
+        grid-row: 4;
         align-self: end;
         justify-self: end;
         padding-bottom: 10px;
@@ -248,8 +189,8 @@
     }
 
     .imageContainer {
-        grid-column: 1;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 2;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 1;                                 
+        grid-row: 2;
         align-self: start;
         justify-self: center;
         overflow: hidden;
@@ -261,8 +202,8 @@
     }
     
     .headerContainer {
-        grid-column: 1 / span 2;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 1;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 1 / span 2;
+        grid-row: 1;
         align-self: start;
     }
     .articleTitle {
@@ -270,8 +211,8 @@
     }
     
     .dateContainer {
-        grid-column: 3;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 1;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 3;
+        grid-row: 1;
         align-self: start;
     }
     .publicationDate {
@@ -279,8 +220,8 @@
     }
     
     .textContainer {
-        grid-column: 2 / span 2;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 2;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 2 / span 2;
+        grid-row: 2;
         align-self: start;
     }
     .summary {
@@ -290,8 +231,8 @@
     }
     
     .sourceContainer {
-        grid-column: 1 / span 3;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 3;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 1 / span 3;
+        grid-row: 3;
         align-self: end;
         justify-self: end;
         padding-bottom: 10px;
@@ -341,8 +282,8 @@
     }
 
     .imageContainer {
-        grid-column: 1;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 1 / span 2;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 1;
+        grid-row: 1 / span 2;
         align-self: start;
         justify-self: center;
         overflow: hidden;
@@ -354,14 +295,14 @@
     }
     
     .headerContainer {
-        grid-column: 2 / span 3;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 1;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 2 / span 3;
+        grid-row: 1;
         align-self: start;
     }
     
     .dateContainer {
-        grid-column: 5;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 1;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 5;
+        grid-row: 1;
         align-self: start;
     }
     .publicationDate {
@@ -369,14 +310,14 @@
     }
     
     .textContainer {
-        grid-column: 2 / span 3;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 2;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 2 / span 3;
+        grid-row: 2;
         align-self: start;
     }
     
     .sourceContainer {
-        grid-column: 5;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 2;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 5;
+        grid-row: 2;
         align-self: end;
         justify-self: end;
     }
@@ -424,8 +365,8 @@
     }
 
     .imageContainer {
-        grid-column: 1;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 1 / span 2;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 1;
+        grid-row: 1 / span 2;
         align-self: start;
         justify-self: center;
         overflow: hidden;
@@ -437,8 +378,8 @@
     }
     
     .headerContainer {
-        grid-column: 2 / span 3;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 1;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 2 / span 3;
+        grid-row: 1;
         align-self: start;
     }
     .articleTitle {
@@ -446,8 +387,8 @@
     }
     
     .dateContainer {
-        grid-column: 5;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 1;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 5;
+        grid-row: 1;
         align-self: start;
     }
     .publicationDate {
@@ -455,14 +396,14 @@
     }
     
     .textContainer {
-        grid-column: 2 / span 3;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 2;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 2 / span 3;
+        grid-row: 2;
         align-self: start;
     }
     
     .sourceContainer {
-        grid-column: 5;                                 /* Deze cel start in de eerste kolom van het grid en is twee kolommen breed. */
-        grid-row: 2;                                    /* Deze cel start in de eerste rij van het grid */
+        grid-column: 5;
+        grid-row: 2;
         align-self: end;
         justify-self: end;
     }

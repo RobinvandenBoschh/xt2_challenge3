@@ -1,7 +1,7 @@
 /* small desktop */
 @media only screen and (min-device-width : 1025px) and (max-device-width : 1439px) {
     #section0 {
-        background: url("images/earth3.jpg");
+        background: url("images/earth3_darker1_w1538_h1024.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: center;
@@ -9,7 +9,7 @@
     }
     
     #section1 {
-        background: url("images/space1.jpg");
+        background: url("images/space1_darker1_w1538_h1024.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: center;
@@ -17,7 +17,7 @@
     }
     
     #section2 {
-        background: url("images/earth1.jpg");
+        background: url("images/earth1_darker1_w1440_h1920.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: center;
@@ -25,7 +25,7 @@
     }
     
     #section3 {
-        background: url("images/earth2.jpg");
+        background: url("images/earth2_darker1_w1720_h1024.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: center;
@@ -57,7 +57,7 @@
         position: relative;
         width: 80%;
         height: 70%;
-        top: 20%;
+        top: 15%;
         left: 10%;
     }
 
@@ -73,5 +73,11 @@
     h2 {
         width: 30%;
         margin-left: 10%;
+    }
+
+    #zoom {
+        position: relative;
+        height: 50px;
+        top: 1%;
     }
 }
